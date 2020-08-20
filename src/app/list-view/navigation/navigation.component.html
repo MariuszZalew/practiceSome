@@ -1,0 +1,16 @@
+<nav aria-label="Data grid navigation">
+  <ul class="pagination justify-content-end">
+    <li class="page-item" [class.disabled]="current === 1">
+      <a class="page-link" href="#" tabindex="-1" (click)="pageSelect(current-1)">Previous</a>
+    </li>
+    <li class="page-item" [ngClass]="{'active': current === 1 }">
+      <a class="page-link" href="#" (click)="pageSelect(1)" >1</a>
+    </li>
+    <li class="page-item" [ngClass]="{'active': current === 2 }" >
+      <a class="page-link" href="#" (click)="pageSelect(2)" >2</a>
+    </li>
+    <li class="page-item" [class.disabled]="current === 2">
+      <a class="page-link" href="#" (click)="pageSelect(current+1)">Next</a>
+    </li>
+  </ul>
+</nav>
