@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PaginationService } from "../pagination.service";
 
 @Component({
   selector: 'sl-semi-head',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SemiHeadComponent implements OnInit {
 
-  constructor() { }
+  constructor( private pag: PaginationService) { }
 
   ngOnInit() {
   }
 
+  searchMe(searchString) {
+    this.pag.searchChars(searchString.target.value);
+  }
 }
