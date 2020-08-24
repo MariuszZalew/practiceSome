@@ -27,5 +27,11 @@
         </div>
       </td>
     </tr>
+  
+    <tr *ngIf="!pag.pagChars.length">
+      <td colspan="6">No Results Found</td>
+       
+    </tr>
+    <!-- <p *ngIf="!pag.pagChars.length">No Results Found</p> -->
   </tbody>
 </table>

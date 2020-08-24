@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -18,6 +19,8 @@ export class PaginationService {
 
   searchChars(char: string) {
     this.http.get(this.search_url + char).subscribe( characters => this.pagChars = characters);
+    console.log(this.pagChars);
+
   }
 
   log() {
