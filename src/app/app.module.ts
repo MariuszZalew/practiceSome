@@ -9,6 +9,7 @@ import { SemiHeadComponent } from './list-view/semi-head/semi-head.component';
 import { TableComponent } from './list-view/table/table.component';
 import { NavigationComponent } from './list-view/navigation/navigation.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormViewComponent } from './form-view/form-view.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { HttpClientModule } from '@angular/common/http';
     SemiHeadComponent,
     TableComponent,
     NavigationComponent,
+    FormViewComponent,
   ],
   imports: [
     BrowserModule,
