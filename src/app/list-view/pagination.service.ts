@@ -9,7 +9,9 @@ export class PaginationService {
 
   chars_url: string = 'http://localhost:3000/characters?_page=';
   search_url: string = 'http://localhost:3000/characters?_limit=10&q=';
+  species_url: string = 'http://localhost:3000/species';
   pagChars;
+  speciments;
 
   constructor( private http: HttpClient) { }
 
@@ -27,4 +29,7 @@ export class PaginationService {
     console.log(this.pagChars);
   }
   
+  getSpecies() {
+    this.http.get(this.species_url).subscribe( spec => this.speciments = spec );
+  }
 }

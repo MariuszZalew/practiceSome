@@ -6,7 +6,6 @@ import { FormViewComponent } from "./form-view/form-view.component";
 
 const routes: Routes = [
   {path: '', component: ListViewComponent},
-  {path: 'Home', component: ListViewComponent},
   {path: 'FormView', component: FormViewComponent}
 ];
 

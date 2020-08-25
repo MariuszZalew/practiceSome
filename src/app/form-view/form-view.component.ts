@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PaginationService } from "../list-view/pagination.service";
 
 @Component({
   selector: 'sl-form-view',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormViewComponent implements OnInit {
 
-  constructor() { }
+  meme;
+  constructor( private pag: PaginationService) { }
 
   ngOnInit() {
+    this.meme = this.pag.speciments;
+  }
+
+  newMethod() {
+    console.log(this.meme);
   }
 
 }
