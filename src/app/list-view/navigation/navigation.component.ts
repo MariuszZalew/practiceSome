@@ -4,7 +4,7 @@ import { PaginationService } from "../pagination.service";
 @Component({
   selector: 'sl-navigation',
   templateUrl: './navigation.component.html',
-  styleUrls: ['./navigation.component.scss']
+  styleUrls: []
 })
 export class NavigationComponent implements OnInit {
 
