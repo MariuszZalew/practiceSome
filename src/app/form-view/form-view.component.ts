@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { PaginationService } from "../list-view/pagination.service";
+// import { Observable } from 'rxjs';
+import { NgForm } from "@angular/forms";
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'sl-form-view',
@@ -8,15 +11,14 @@ import { PaginationService } from "../list-view/pagination.service";
 })
 export class FormViewComponent implements OnInit {
 
-  meme;
-  constructor( private pag: PaginationService) { }
+  constructor( public pag: PaginationService, private router: Router) { }
 
   ngOnInit() {
-    this.meme = this.pag.speciments;
+    this.pag.getSpecies();
   }
 
-  newMethod() {
-    console.log(this.meme);
+  submitChar(char: NgForm) {
+    console.log(char.value, char.valid);
+    this.router.navigate(['']);
   }
-
 }

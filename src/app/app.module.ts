@@ -10,6 +10,7 @@ import { TableComponent } from './list-view/table/table.component';
 import { NavigationComponent } from './list-view/navigation/navigation.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormViewComponent } from './form-view/form-view.component';
+import { FormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { FormViewComponent } from './form-view/form-view.component';
     FormViewComponent,
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule

@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { PaginationService } from "../pagination.service";
+import { fromEvent, Observable } from 'rxjs';
+import { map, debounceTime } from 'rxjs/operators';
+// import { NgForm } from "@angular/forms";
 
 @Component({
   selector: 'sl-semi-head',
@@ -15,5 +18,9 @@ export class SemiHeadComponent implements OnInit {
 
   searchMe(searchString) {
     this.pag.searchChars(searchString.target.value);
+  }
+
+  searchSpec() {
+    this.pag.getSpecies();
   }
 }

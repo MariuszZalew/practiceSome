@@ -1,6 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import { Observable } from 'rxjs';
+import { debounceTime, distinctUntilChanged } from "rxjs/operators";
+
+const URL_BASE: string = 'http://localhost:3000/';
 
 @Injectable({
   providedIn: 'root'
@@ -22,7 +25,7 @@ export class PaginationService {
   searchChars(char: string) {
     this.http.get(this.search_url + char).subscribe( characters => this.pagChars = characters);
     console.log(this.pagChars);
-
+    // this.http.get(this.search_url + char).pipe(debounceTime(300)).s
   }
 
   log() {
@@ -31,5 +34,7 @@ export class PaginationService {
   
   getSpecies() {
     this.http.get(this.species_url).subscribe( spec => this.speciments = spec );
+    console.log(this.speciments);
+    // return this.speciments;
   }
 }
